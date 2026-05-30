@@ -1,64 +1,37 @@
 """
 ThunderCat6 Constants
+
+TODO: Populate from datasheets
+- I2C addresses from IC datasheets
+- GPIO assignments from schematic
+- Register definitions from IC datasheets
 """
 
-# FTDI Configuration
-FTDI_VID = 0x0403
-FTDI_PID = 0x6011  # FT4232H
-DEFAULT_BAUDRATE = 115200
+# =============================================================================
+# TODO: I2C Addresses - From datasheets
+# =============================================================================
+# I2C_ADDR_BR = 0x??      # TODO: From BR datasheet
+# I2C_ADDR_KR = 0x??      # TODO: From KR datasheet
+# I2C_ADDR_FX20 = 0x??    # TODO: From FX20 datasheet
+# I2C_ADDR_PD = 0x??      # TODO: From PMG1-S3 datasheet
+# I2C_ADDR_MST = 0x??     # TODO: From RTD2198 datasheet
 
-# I2C Addresses (7-bit)
-I2C_ADDR_BR = 0x20      # Barlow Ridge
-I2C_ADDR_KR = 0x21      # Kite Ridge
-I2C_ADDR_PD1 = 0x08     # PD Controller 1 (PMG1-S3)
-I2C_ADDR_PD2 = 0x09     # PD Controller 2 (PMG1-S3)
-I2C_ADDR_FX20 = 0x30    # FX20 USB Traffic Generator
-I2C_ADDR_MST = 0x28     # MST Hub (Realtek)
-I2C_ADDR_USB_HUB = 0x2C # USB2 Hub
-I2C_ADDR_HS_MUX = 0x70  # High-Speed Mux
+# =============================================================================
+# TODO: GPIO Assignments - From schematic
+# =============================================================================
+# GPIO_xxx = ?            # TODO: Define after schematic
 
-# GPIO Pin Assignments (FTDI)
-GPIO_BR_RESET = 0
-GPIO_KR_RESET = 1
-GPIO_FX20_RESET = 2
-GPIO_MST_RESET = 3
-GPIO_HPD_CTRL = 4
-GPIO_HS_MUX_SEL0 = 5
-GPIO_HS_MUX_SEL1 = 6
-GPIO_LED_ERR = 7
-
-# DIP Switch
-DIP_SWITCH_BITS = 4
-DIP_SWITCH_MAX = 15
-
-# Timeouts (seconds)
-TIMEOUT_MODE_SWITCH = 7.0
-TIMEOUT_MODE_SWITCH_FAST = 0.5
-TIMEOUT_RESET = 2.0
-TIMEOUT_CONNECT = 5.0
-
-# Error Codes
-ERR_SUCCESS = 0x00
-ERR_TIMEOUT = 0x01
-ERR_INVALID_MODE = 0x02
-ERR_COMMUNICATION = 0x03
-ERR_DEVICE_NOT_READY = 0x04
-ERR_INVALID_PARAMETER = 0x05
-
-# Status Flags
-STATUS_BR_LINK_UP = 0x01
-STATUS_KR_LINK_UP = 0x02
-STATUS_USB_CONNECTED = 0x04
-STATUS_DP_CONNECTED = 0x08
-STATUS_PCIE_CONNECTED = 0x10
-STATUS_ERROR = 0x80
-
-# Component IDs
-COMPONENT_BR = "br"
-COMPONENT_KR = "kr"
-COMPONENT_PD = "pd"
-COMPONENT_FTDI = "ftdi"
-COMPONENT_FX20 = "fx20"
-COMPONENT_MST = "mst"
-COMPONENT_USB_HUB = "usb_hub"
-COMPONENT_ALL = "all"
+# =============================================================================
+# TODO: Mode Definitions - From requirements
+# =============================================================================
+# Modes from TC6 requirements (valid):
+MODES = [
+    "TBT4_TUNNEL",      # TBT4 with PCIe + DP + USB
+    "USB4_TUNNEL",      # USB4 native
+    "USB3_GEN2X2",      # 20 Gbps
+    "USB3_GEN2X1",      # 10 Gbps
+    "USB3_GEN1X2",      # 10 Gbps
+    "USB3_GEN1X1",      # 5 Gbps
+    "DP_ALT_MODE",      # DP 2.0/2.1
+    "MFD",              # Multi-Function Device
+]

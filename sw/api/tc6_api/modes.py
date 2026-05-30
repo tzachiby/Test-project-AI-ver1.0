@@ -1,74 +1,40 @@
 """
-ThunderCat6 Operating Modes
+ThunderCat6 Mode Definitions
+
+Modes are defined based on TC6 requirements document.
 """
 
-from enum import Enum, auto
+from enum import Enum
 
 
 class TC6Mode(Enum):
     """
-    ThunderCat6 operating modes.
+    TC6 operation modes from requirements.
     
-    Each mode configures the card for specific testing scenarios.
+    These mode names are from the TC6 requirements document.
+    Implementation details TBD after obtaining datasheets.
     """
     
-    # Thunderbolt/USB4 Tunnel Modes
-    USB4 = auto()           # USB4 tunneled mode
-    TBT3 = auto()           # Thunderbolt 3 tunneled mode
-    PCIE_TUNNEL = auto()    # PCIe tunneled (via TBT/USB4)
-    DP_TUNNEL = auto()      # DP tunneled (via TBT/USB4)
-    USB_TUNNEL = auto()     # USB tunneled (via TBT/USB4)
+    # Tunnel Modes
+    TBT4_TUNNEL = "tbt4_tunnel"        # TBT4 with PCIe + DP + USB
+    USB4_TUNNEL = "usb4_tunnel"        # USB4 native mode
+    
+    # USB3 Native Modes (NEW in TC6)
+    USB3_GEN2X2 = "usb3_gen2x2"        # 20 Gbps (2 lanes x 10 Gbps)
+    USB3_GEN2X1 = "usb3_gen2x1"        # 10 Gbps (1 lane x 10 Gbps)
+    USB3_GEN1X2 = "usb3_gen1x2"        # 10 Gbps (2 lanes x 5 Gbps)
+    USB3_GEN1X1 = "usb3_gen1x1"        # 5 Gbps (1 lane x 5 Gbps)
     
     # Alt Modes
-    DP_ALT = auto()         # DisplayPort Alt Mode
-    MFD = auto()            # Multi-Function Device (USB + DP)
+    DP_ALT_MODE = "dp_alt_mode"        # DP 2.0/2.1 Alt Mode
     
-    # Native USB Modes
-    USB_NATIVE_GEN1X1 = auto()  # USB 3.2 Gen1x1 (5Gbps)
-    USB_NATIVE_GEN1X2 = auto()  # USB 3.2 Gen1x2 (10Gbps)
-    USB_NATIVE_GEN2X1 = auto()  # USB 3.2 Gen2x1 (10Gbps)
-    USB_NATIVE_GEN2X2 = auto()  # USB 3.2 Gen2x2 (20Gbps)
+    # Multi-Function
+    MFD = "mfd"                        # USB3 + DP combined
     
-    # Special Modes
-    EMPTY_DONGLE = auto()   # No device connected (pass-through)
-    NDA = auto()            # No Device Attached (BR/KR disconnected)
-    BYPASS = auto()         # Direct UFP to DFP bypass
-    
-    def __str__(self) -> str:
-        return self.name
-        
-    @classmethod
-    def from_string(cls, mode_str: str) -> "TC6Mode":
-        """Convert string to TC6Mode enum."""
-        try:
-            return cls[mode_str.upper()]
-        except KeyError:
-            raise ValueError(f"Unknown mode: {mode_str}")
+    # Special Modes (NEW in TC6)
+    EMPTY_DONGLE = "empty_dongle"      # No connection
+    NDA = "nda"                        # BR/KR disconnected
 
 
-class TC6SubMode(Enum):
-    """
-    Sub-modes for specific configurations.
-    """
-    
-    # DP configurations
-    DP_MST = auto()         # Multi-Stream Transport
-    DP_SST = auto()         # Single-Stream Transport
-    DP_HBR3 = auto()        # HBR3 bitrate
-    DP_UHBR10 = auto()      # UHBR10 bitrate
-    DP_UHBR13_5 = auto()    # UHBR13.5 bitrate
-    DP_UHBR20 = auto()      # UHBR20 bitrate
-    
-    # USB sub-modes
-    USB_BULK = auto()       # Bulk transfer mode
-    USB_ISOC = auto()       # Isochronous transfer mode
-    USB_INTERRUPT = auto()  # Interrupt transfer mode
-    
-    # LPM states
-    USB_U0 = auto()         # Active state
-    USB_U1 = auto()         # Standby (fast exit)
-    USB_U2 = auto()         # Standby (slow exit)
-    USB_U3 = auto()         # Suspend
-    
-    def __str__(self) -> str:
-        return self.name
+# TODO: Mode switching implementation after control interface defined
+# TODO: Mode configuration registers from IC datasheets

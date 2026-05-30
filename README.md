@@ -1,9 +1,28 @@
 # ThunderCat6 (TC6) Test Card Project
 
+## ⚠️ PROJECT STATUS: PLACEHOLDER
+
+**Most technical specifications are PLACEHOLDERS awaiting datasheets.**
+
+### Required Before Implementation:
+- [ ] BR (Barlow Ridge) datasheet - Contact Intel
+- [ ] KR (Kite Ridge) datasheet - Contact Intel
+- [ ] FX20 datasheet - Contact Infineon/Cypress
+- [ ] PMG1-S3 datasheet - Download from Infineon
+- [ ] RTD2198 (MST Hub) datasheet - Contact Realtek
+- [ ] Mechanical/form factor requirements
+
+### Valid Content (From TC6 Requirements Excel):
+- Requirements analysis in `docs/requirements/TC6_Requirements_Analysis.md`
+- Component names and costs
+- Feature requirements and mode definitions
+
+---
+
 ## Project Overview
 ThunderCat6 is the next generation test card for Thunderbolt/USB4 validation, designed to address TC5 limitations and support new platform requirements.
 
-## Key Improvements over TC5
+## Key Improvements over TC5 (From Requirements)
 - **FX20** replaces FX3 for enhanced USB synthetic traffic generation with LPM support
 - **KR (Kite Ridge)** integration for USB4 support alongside BR (Barlow Ridge)
 - **Direct UFP-DFP bypass** via high-speed mux for commercial device testing
