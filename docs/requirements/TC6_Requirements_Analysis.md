@@ -150,7 +150,7 @@ ThunderCat6 (TC6) is the next generation test card designed to address limitatio
 | PD | $2.34 | $4.68 | $4.68 | Dual PD |
 | USB2 Hub | $2.50 | $3.75 | $3.75 | Enhanced |
 | High Speed Mux | $3 | $4 | $3 | For bypass |
-| KR (Kaby Ridge) | - | $10 | $10 | **New** |
+| KR (Kite Ridge) | - | $10 | $10 | **New** |
 | TR (Retimer) | - | $20 | $10 | **New** |
 | Low Speed Mux | - | $2 | $2 | **New** |
 | SSD | $300 | $600 | $300 | Higher for PPV |
@@ -207,7 +207,7 @@ ThunderCat6 (TC6) is the next generation test card designed to address limitatio
 
 ### 7.2 Glossary
 - **BR**: Barlow Ridge (Thunderbolt 4 Controller)
-- **KR**: Kaby Ridge (USB4 Controller)
+- **KR**: Kite Ridge (USB4 Controller)
 - **FX20**: USB Synthetic Traffic Generator (replaces FX3)
 - **LTTPR**: Link Training Tunable PHY Repeater
 - **MFD**: Multi-Function Device

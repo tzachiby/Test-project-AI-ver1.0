@@ -22,7 +22,7 @@
 | Item | Part Number | Description | Qty PPV | Qty FV | Unit Cost | PPV Total | FV Total | Supplier |
 |------|-------------|-------------|---------|--------|-----------|-----------|----------|----------|
 | U1 | BR-TBD | Barlow Ridge TBT4 Controller | 1 | 1 | $20.00 | $20.00 | $20.00 | Intel |
-| U2 | KR-TBD | Kaby Ridge USB4 Controller | 1 | 1 | $10.00 | $10.00 | $10.00 | Intel |
+| U2 | KR-TBD | Kite Ridge USB4 Controller | 1 | 1 | $10.00 | $10.00 | $10.00 | Intel |
 | U3 | CYUSB4356 | FX20 USB Traffic Generator | 2 | 1 | $60.00 | $120.00 | $60.00 | Cypress/Infineon |
 | U4 | RTD2198 | Realtek MST Hub (DP Sink) | 3 | 4 | $20.00 | $60.00 | $80.00 | Realtek |
 
@@ -169,7 +169,7 @@
 | Item | Lead Time | Action |
 |------|-----------|--------|
 | Barlow Ridge | 12 weeks | Order early |
-| Kaby Ridge | 12 weeks | Order early |
+| Kite Ridge | 12 weeks | Order early |
 | FX20 | 16 weeks | Order immediately |
 | RTD2198 | 10 weeks | Confirm availability |
 | M.2 SSD | 4 weeks | Standard |

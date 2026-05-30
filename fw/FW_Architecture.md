@@ -77,7 +77,7 @@ typedef struct {
 
 ---
 
-## 4. Kaby Ridge (KR) Firmware
+## 4. Kite Ridge (KR) Firmware
 
 ### 4.1 Overview
 | Property | Value |

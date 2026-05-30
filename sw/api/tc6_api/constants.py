@@ -9,7 +9,7 @@ DEFAULT_BAUDRATE = 115200
 
 # I2C Addresses (7-bit)
 I2C_ADDR_BR = 0x20      # Barlow Ridge
-I2C_ADDR_KR = 0x21      # Kaby Ridge
+I2C_ADDR_KR = 0x21      # Kite Ridge
 I2C_ADDR_PD1 = 0x08     # PD Controller 1 (PMG1-S3)
 I2C_ADDR_PD2 = 0x09     # PD Controller 2 (PMG1-S3)
 I2C_ADDR_FX20 = 0x30    # FX20 USB Traffic Generator

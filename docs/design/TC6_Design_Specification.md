@@ -69,7 +69,7 @@ ThunderCat6 (TC6) is a next-generation test card designed to validate Thunderbol
 **Solution**:
 - PD control for rate negotiation
 - USB4 always 1+1 bonding, lanes via active cable
-- KR (Kaby Ridge) integration for native USB4 control
+- KR (Kite Ridge) integration for native USB4 control
 
 ### 2.6 High Priority #6: BR Bypass for Commercial Devices
 **Problem**: No bypass channel without going through BR.
@@ -103,7 +103,7 @@ Option 2: UFP ───► HS Mux ───► DFP (External device connector)
 | Component | Part Number | Qty | Unit Cost | Total | Notes |
 |-----------|-------------|-----|-----------|-------|-------|
 | BR (Barlow Ridge) | TBD | 1 | $20.00 | $20.00 | TBT4 Controller |
-| KR (Kaby Ridge) | TBD | 1 | $10.00 | $10.00 | USB4 Controller |
+| KR (Kite Ridge) | TBD | 1 | $10.00 | $10.00 | USB4 Controller |
 | FX20 | Cypress FX20 | 1 | $60.00 | $60.00 | USB Traffic Gen |
 | TR (Retimer) | TBD | 1 | $10.00 | $10.00 | External Retimer |
 | MST Realtek | RTD2198 | 4 | $20.00 | $80.00 | DP Sink Hub |

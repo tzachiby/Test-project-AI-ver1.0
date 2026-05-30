@@ -5,7 +5,7 @@ ThunderCat6 is the next generation test card for Thunderbolt/USB4 validation, de
 
 ## Key Improvements over TC5
 - **FX20** replaces FX3 for enhanced USB synthetic traffic generation with LPM support
-- **KR (Kaby Ridge)** integration for USB4 support alongside BR (Barlow Ridge)
+- **KR (Kite Ridge)** integration for USB4 support alongside BR (Barlow Ridge)
 - **Direct UFP-DFP bypass** via high-speed mux for commercial device testing
 - **Native USB speed downgrade** support (Gen1x1, 1x2, 2x1, 2x2)
 - **DP SST mode** support in addition to MST

@@ -78,7 +78,7 @@ ThunderCat6 (TC6) is a test card designed to validate Thunderbolt 4, USB4, and U
 - **Interface**: PCIe Gen4 x4 to SSD, DP2.0 to MST
 - **Control**: SPI/I2C from FTDI
 
-#### 3.1.2 Kaby Ridge (KR) - USB4 Controller (NEW)
+#### 3.1.2 Kite Ridge (KR) - USB4 Controller (NEW)
 - **Function**: USB4 v1/v2 support, rate control
 - **Interface**: USB4 to UFP
 - **Control**: I2C from FTDI
